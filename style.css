@@ -1,0 +1,217 @@
+/*Defines the properties of the body part*/
+body {
+  font-size: 1.6rem;
+  background-color: #f4f4f4;
+}
+/*
+* Defines the properties of the header
+* classes: logo, header-nav, navbar
+*/
+header {
+  margin: 0;
+  background-color: darkcyan;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: fantasy;
+  margin-left: 5px;
+  padding: 1px;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  border: solid;
+  border-color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px;
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  display: block;
+  padding-top: 3px;
+}
+/*Defines the specific properties of each list item in the navigation bar*/
+li {
+  float: right;
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px 12px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+/* 
+* Main part of the website
+*
+*/
+.bodyheader {
+  text-align: center;
+}
+
+h1 {
+  color: darkblue;
+  margin-left: 3cm;
+}
+h4 {
+  padding: 5px;
+  margin: 0;
+}
+
+/*These are the styles for the table that displays all available products*/
+.grid-table {
+  display: grid;
+  padding: 50px;
+}
+
+.styled td,
+.styled th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.styled tr:nth-child(even) {
+  background-color: darkgray;
+}
+
+.styled tr:hover {
+  background-color: rgb(148, 199, 201);
+}
+
+.styled th {
+  padding: 12px;
+  text-align: left;
+  background-color: burlywood;
+  color: white;
+}
+/*Styles for all labels*/
+label {
+  padding: 2px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: large;
+}
+
+/*There are two grid items in the grid-container: select Manufacturer and Component Type, type in Modelnumber and Quantity*/
+.grid-container {
+  /*This is the grid layout to place the two components next to each other. */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content;
+  align-items: center;
+  padding: 40px;
+  gap: 90px;
+}
+
+/* 4 Components of the two gird items: Two select menues to select Manufacturer and Type and.. */
+.component {
+  padding: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 20px;
+  border-color: black;
+  border-radius: 10px;
+  background-color: gainsboro;
+}
+
+/* Specifications for the text input*/
+
+.comp {
+  display: block;
+  width: 80%;
+  border-color: black;
+  border-radius: 20px;
+  border-style: hidden;
+  background-color: gainsboro;
+  padding: 16px 20px;
+}
+
+/* This is used to input Delivery and Personal Details*/
+aside {
+  background-color: burlywood;
+  margin-left: 1cm;
+  margin-right: 19cm;
+  margin-bottom: 1cm;
+  padding: 30px;
+}
+.personal_details {
+  display: grid;
+}
+/* Textarea to input extra details*/
+.textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+/*Specifications for the location and the style of the order button*/
+.order_button {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 600px;
+}
+.button {
+  display: flex;
+  justify-content: right;
+}
+
+input[type="button"] {
+  background-color: darkcyan;
+  border-color: white;
+  color: black;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*
+* Footer
+*/
+footer {
+  background-color: darkcyan;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0 3rem;
+  border: solid;
+  border-color: black;
+}
+
+.PolicyAndTerms {
+  margin-top: 4cm;
+}
+footer a {
+  color: white;
+}
+.policy {
+  padding: 10px;
+}
+.CompanyContact {
+  display: flex;
+  justify-content: right;
+  margin-right: 1rem;
+}

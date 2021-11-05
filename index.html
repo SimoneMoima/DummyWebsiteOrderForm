@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- This is the header of the homepage which include a logo and a Navigation bar-->
+    <header>
+      <!-- Logo and company name-->
+      <div class="header-nav">
+        <div class="logo">
+          <h4>
+            <img src="computer.png" alt="Company Logo" width="60" height="60" />
+            Infinity Computers
+          </h4>
+        </div>
+        <!--Navigation bar-->
+        <nav role="navigation" aria-label="main menu">
+          <ul class="navbar">
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Order</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Main part - Display product table, Input Products to order, Fill in delivery details -->
+      <div class="bodyheader">
+        <h1>
+          <br />
+          Place your Order!
+        </h1>
+        <h3>Please choose from the following Computer Components:</h3>
+        <br />
+      </div>
+
+      <!--Table that displayes the components types, their manufacturer and the modelnumber-->
+      <div class="grid-table">
+        <table class="styled" id="components">
+          <tr>
+            <th>Company</th>
+            <th>Type</th>
+            <th>Modelnumber</th>
+          </tr>
+          <tr>
+            <td>ASUS</td>
+            <td>Case</td>
+            <td>TCH4637H</td>
+          </tr>
+          <tr>
+            <td>ASUS</td>
+            <td>Soundcard</td>
+            <td>AP56T</td>
+          </tr>
+          <tr>
+            <td>Intel</td>
+            <td>Mainboard</td>
+            <td>HI722T7</td>
+          </tr>
+          <tr>
+            <td>AMD</td>
+            <td>Mainboard</td>
+            <td>AMD67</td>
+          </tr>
+          <tr>
+            <td>Corsair</td>
+            <td>RAM</td>
+            <td>UT8D93</td>
+          </tr>
+          <tr>
+            <td>Seagate</td>
+            <td>Hard drive</td>
+            <td>SEA34W</td>
+          </tr>
+          <tr>
+            <td>Corsair</td>
+            <td>Power supply</td>
+            <td>MN92</td>
+          </tr>
+          <tr>
+            <td>Seagate</td>
+            <td>Power supply</td>
+            <td>SEA784G</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Grid Container to allign the input for the specific order: component type, manufacturer, modelnumber, quantity-->
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="component">
+            <label for="type">Choose a component type:</label>
+            <select name="type" id="type">
+              <option value="">--Please choose--</option>
+              <option value="case">Case</option>
+              <option value="motherboard">Mainboard</option>
+              <option value="RAM">RAM</option>
+              <option value="harddrive">Hard Drive</option>
+              <option value="powersupply">Power supply unit</option>
+            </select>
+          </div>
+
+          <div class="component">
+              <label for="manufacturer">Please choose the manufacturer:</label>
+              <select name="manufacturer" id="manufacturer">
+                <option value="">--Please choose--</option>
+                <option value="ASUS">ASUS</option>
+                <option value="Intel">Intel</option>
+                <option value="Aigo">AMD</option>
+                <option value="Acer">Corsair</option>
+                <option value="Toshiba">Seagte</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="component">
+              <label>Modelnumber:</label>
+              <input
+                class="comp"
+                id="modelnumber"
+                type="text"
+                placeholder="Type here..."
+              />
+          </div>
+
+          <div class="component">
+              <label>How many:</label>
+              <input
+                class="comp"
+                id="quantity"
+                type="text"
+                placeholder="Type here..."
+              />
+          </div>
+        </div>
+      </div>
+
+      <!--This part contains the Order placement by getting the personal details and address and confirms with an order button-->
+      <aside>
+        <form class="personal_details">
+          <h2>Delivery Details</h2>
+
+          <br /><label>Name</label>
+          <input class="comp" type="text" id="name" />
+
+          <br /><label>Surname</label>
+          <input class="comp" type="text" id="surname" />
+
+          <br /><label>Street, Housenumber</label>
+          <input class="comp" type="text" id="street" />
+
+          <br /><label>City, Code</label>
+          <input class="comp" type="text" id="city" />
+
+          <br /><label>Email</label>
+          <input class="comp" type="text" id="email" />
+
+          <br /><label>Phone</label>
+          <input class="comp" type="text" id="phone" />
+          <br />
+          <br /><label>Message</label>
+          <br />
+          <textarea
+            class="textarea"
+            id="message"
+            placeholder="Enter you message here..."
+            cols="30"
+            rows="5"
+          ></textarea>
+
+          <div class="button">
+            <input type="button" id="bt" value="Order" onclick="saveFile()" />
+          </div>
+        </form>
+      </aside>
+    </main>
+    <!--Footer with Address of the company and links to the Privacy Policy and Terms of Service-->
+    <footer>
+      <div class="PolicyAndTerms">
+        <a href="" class="policy">Privacy Policy</a>
+        <a href="">Terms of Service</a>
+      </div>
+
+      <div class="CompanyContact">
+        <h5>
+          Kontakt: <br />
+          Infinity Computers <br />
+          Gatesstreet 6,<br />
+          56784 Siliconvalley <br />
+          Phone: 08763 - 98 764 849 <br />
+        </h5>
+      </div>
+    </footer>
+  </body>
+</html>
